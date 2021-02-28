@@ -1,0 +1,78 @@
+* {
+  box-sizing: border-box;
+}
+
+[class*="col-"] {
+    width: 100%;
+    margin-top: 0;
+    float: left;
+    padding: 10px;
+}
+
+@media only screen and (min-width: 600px) {
+  .col-1 {width: 8.33%;}
+  .col-2 {width: 16.66%;}
+  .col-3 {width: 25%;}
+  .col-4 {width: 33.33%;}
+  .col-5 {width: 41.66%;}
+  .col-6 {width: 50%;}
+  .col-7 {width: 58.33%;}
+  .col-8 {width: 66.66%;}
+  .col-9 {width: 75%;}
+  .col-10 {width: 83.33%;}
+  .col-11 {width: 91.66%;}
+  .col-12 {width: 100%;}
+}
+
+body {
+  background-color: #264653;
+  color: #F4A261;
+  font-family: "Lucida Sans", sans-serif;
+}
+
+header {
+  color: #E9C46A;
+  font-size: 7vw;
+  text-align: center;
+}
+
+button {
+  background-color: #E76F51;
+  /* color: #2A9D8F; */
+  color: #264653;
+  font-weight: bold;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+select {
+  text-align: center;
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+div.submit {
+  text-align: center;
+}
+
+div#chosen-god {
+  text-align: center;
+}
+
+
