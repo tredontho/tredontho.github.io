@@ -28,7 +28,7 @@ function selectRandom() {
 }
 
 function renderRandom(arr) {
-  const chosenDiv = document.getElementById("chosen-god");
+  const chosenDiv = document.getElementById("chosen-gods");
   chosenDiv.innerHTML = arr.join('<br />');
 }
 

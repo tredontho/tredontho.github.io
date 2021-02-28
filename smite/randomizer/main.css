@@ -14,7 +14,7 @@ header {
   text-align: center;
 }
 
-button {
+button#randomize {
   /* background-color: #E76F51; */
   /* color: #2A9D8F; */
   /* color: #264653; */
@@ -23,6 +23,7 @@ button {
   border: none;
   border-radius: 4px;
   cursor: pointer;
+  width: 100%;
 }
 
 select {
@@ -46,11 +47,11 @@ label {
 }
 
 div.submit {
-  text-align: center;
+  /* text-align: center; */
   float: right;
 }
 
-div#chosen-god {
+div#chosen-gods {
   text-align: center;
 }
 
