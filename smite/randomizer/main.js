@@ -1,5 +1,6 @@
 const allGods = ["Achilles", "Agni", "Ah Muzen Cab", "Ah Puch", "Amaterasu", "Anhur", "Anubis", "Ao Kuang", "Aphrodite", "Apollo", "Arachne", "Ares", "Artemis", "Artio", "Athena", "Awilix", "Baba Yaga", "Bacchus", "Bakasura", "Baron Samedi", "Bastet", "Bellona", "Cabrakan", "Camazotz", "Cerberus", "Cernunnos", "Chaac", "Chang'e", "Chernobog", "Chiron", "Chronos", "Cthulhu", "Cu Chulainn", "Cupid", "Da Ji", "Danzaburou", "Discordia", "Erlang Shen", "Fafnir", "Fenrir", "Freya", "Ganesha", "Geb", "Guan Yu", "Hachiman", "Hades", "He Bo", "Heimdallr", "Hel", "Hera", "Hercules", "Horus", "Hou Yi", "Hun Batz", "Isis", "Izanami", "Janus", "Jing Wei", "Jormungandr", "Kali", "Khepri", "King Arthur", "Kukulkan", "Kumbhakarna", "Kuzenbo", "Loki", "Medusa", "Mercury", "Merlin", "Mulan", "Ne Zha", "Neith", "Nemesis", "Nike", "Nox", "Nu Wa", "Odin", "Olorun", "Osiris", "Pele", "Persephone", "Poseidon", "Ra", "Raijin", "Rama", "Ratatoskr", "Ravana", "Scylla", "Serqet", "Set", "Skadi", "Sobek", "Sol", "Sun Wukong", "Susano", "Sylvanus", "Terra", "Thanatos", "The Morrigan", "Thor", "Thoth", "Tiamat", "Tsukuyomi", "Tyr", "Ullr", "Vamana", "Vulcan", "Xbalanque", "Xing Tian", "Yemoja", "Ymir", "Zeus", "Zhong Kui"];
 
+updateRandomizeButton();
 function shuffle(origArray) {
   const array = [...origArray];
   var currentIndex = array.length, temporaryValue, randomIndex;
@@ -22,14 +23,16 @@ function shuffle(origArray) {
 
 function selectRandom() {
   const num = document.getElementById("numGods").value;
-  console.log(num);
   const shuffled = shuffle(allGods);
   renderRandom(shuffled.slice(0,num));
 }
 
 function renderRandom(arr) {
-  console.log("Rendering: " + arr.join(', '));
   const chosenDiv = document.getElementById("chosen-god");
   chosenDiv.innerHTML = arr.join('<br />');
 }
 
+function updateRandomizeButton() {
+  const selected = document.getElementById("numGods").value;
+  document.getElementById("randomize").hidden = (selected == "default");
+}

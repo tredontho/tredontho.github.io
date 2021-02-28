@@ -1,19 +1,19 @@
 <html>
   <head>
-    <title>Smite Randomizer</title>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <meta content="utf-8" http-equiv="encoding">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="main.js" defer />
     </script>
     <link rel="stylesheet" type="text/css" href="./main.css" />
+    <title>Smite Randomizer</title>
   </head>
   <body>
     <header>Smite Randomizer</header>
       <div class="row">
-        <div class="col-2">
-          Number of Gods
-        </div>
-        <div class="col-10">
-          <select id="numGods">
+        <div class="col-8">
+          <select id="numGods" onchange="updateRandomizeButton()">
+            <option value="default" selected># of Gods to Randomize</option>
             <option value="1">One</option>
             <option value="2">Two</option>
             <option value="3">Three</option>
@@ -21,14 +21,9 @@
             <option value="5">Five</option>
           </select>
         </div>
-      </div>
-      <div class="row">
-        <div class="col-4"></div>
-        <div class="col-4, submit">
-          <button id="randomize" onclick="selectRandom()">Randomize</button>
+        <div class="col-4 submit">
+          <button id="randomize" onclick="selectRandom()" hidden="true">Randomize</button>
         </div>
-        <div class="col-4"></div>
-      </div>
       <div class=row">
         <div id="chosen-god" class="col-12"></div>
       </div>
